@@ -7,4 +7,4 @@ RUN cd /tmp && \
     rm kibana-3.1.2.tar.gz && \
     mv kibana-*/* /usr/share/nginx/html/ 
 
-ADD storage/config.js /usr/share/nginx/html/config.js
+COPY storage/config.js /usr/share/nginx/html/config.js
