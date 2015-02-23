@@ -8,4 +8,8 @@ RUN cd /tmp && \
     mkdir -p /usr/share/nginx/html && \
     mv kibana-*/* /usr/share/nginx/html/ 
 
-COPY storage/config.js /usr/share/nginx/html/config.js
+COPY cookbooks/ /chef/cookbooks/
+
+# Set the chef local run list
+ENV chef_node_name kibana.docker.local
+ENV chef_run_list $chef_run_list,kibana
