@@ -1,10 +1,18 @@
-FROM hpess/nginx
-MAINTAINER Paul Cooke <paul.cooke@hp.com>
+FROM hpess/chef
+MAINTAINER Karl Stoney <karl.stoney@hp.com> 
 
-RUN cd /tmp && \
-    wget --quiet https://download.elasticsearch.org/kibana/kibana/kibana-3.1.2.tar.gz && \
-    tar zxf kibana-3.1.2.tar.gz && \
-    rm kibana-3.1.2.tar.gz && \
-    mv kibana-*/* /usr/share/nginx/html/ 
+RUN cd /opt && \
+    https_proxy=http://proxy.sdc.hp.com:8080 wget --quiet https://download.elasticsearch.org/kibana/kibana/kibana-4.0.1-linux-x64.tar.gz && \ 
+    tar zxf kibana-*.tar.gz && \
+    rm kibana-*.tar.gz && \
+    mv kibana-* kibana && \
+    chown -R docker:docker /opt/kibana
 
-COPY storage/config.js /usr/share/nginx/html/config.js
+COPY services/* /etc/supervisord.d/
+COPY cookbooks/ /chef/cookbooks/
+
+EXPOSE 5601
+
+ENV HPESS_ENV kibana
+ENV chef_node_name kibana.docker.local
+ENV chef_run_list kibana
