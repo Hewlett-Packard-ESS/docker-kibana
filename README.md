@@ -31,4 +31,6 @@ If you want kibana to provide a CA certificate for your elastic search instance,
 If you want to use a key and certificate for outgoing kibana requests, simply drop them into /storage/server.key and /storage/server.crt
 
 ## License
-This application is distributed unter the MIT License (MIT)
+This docker application is distributed unter the MIT License (MIT).
+
+Kibana itself is licenced under the [Apache](https://github.com/elastic/kibana/blob/master/LICENSE.md) License.
