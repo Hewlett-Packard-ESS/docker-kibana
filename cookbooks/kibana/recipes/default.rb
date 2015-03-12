@@ -10,6 +10,10 @@ directory '/opt/kibana' do
   recursive true
 end
 
+ssl_key = nil
+ssl_crt = nil
+ca_crt = nil
+
 if File.exist?('/storage/server.key')
   ssl_key = '/storage/server.key'
 end
@@ -19,7 +23,7 @@ if File.exist?('/storage/server.crt')
 end
 
 if File.exist?('/storage/ca.crt')
-  ca = '/storage/ca.crt'
+  ca_crt = '/storage/ca.crt'
 end
 
 config = { 
