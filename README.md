@@ -1,4 +1,5 @@
-## hpess/kibana
+![Kibana](/kibana.png?raw=true "Kibana")
+
 This container builds on hpess/chef by adding Kibana. Currently installing kibana 4.0.1
 
 ## Use
