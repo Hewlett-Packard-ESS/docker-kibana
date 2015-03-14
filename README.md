@@ -26,7 +26,7 @@ The defaults for all of these are:
 ```
 
 ## SSL Certificates
-If you want kibana to provide a CA certificate for your elastic search instance, simply drop it into /sotrage/ca.pem
+If you want to provide kibana a CA certificate for your elastic search instance, simply drop it into /sotrage/ca.pem
 
 If you want to use a key and certificate for outgoing kibana requests, simply drop them into /storage/server.key and /storage/server.crt
 
