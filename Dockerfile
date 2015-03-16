@@ -1,4 +1,4 @@
-FROM hpess/chef
+FROM hpess/chef:master
 MAINTAINER Karl Stoney <karl.stoney@hp.com> 
 
 RUN cd /opt && \
