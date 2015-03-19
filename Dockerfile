@@ -11,10 +11,6 @@ RUN cd /opt && \
 COPY services/* /etc/supervisord.d/
 COPY cookbooks/ /chef/cookbooks/
 
-# Set the correct user permissions on the files
-RUN chown -R docker:docker /opt/kibana && \
-    chown -R docker:docker /storage
-
 EXPOSE 5601
 
 ENV HPESS_ENV kibana
