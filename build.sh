@@ -1,1 +1,1 @@
-docker build -t hpess/kibana:latest .
+docker build -t hpess/kibana:master .
