@@ -1,6 +1,6 @@
 ![Kibana](/kibana.png?raw=true "Kibana")
 
-This container builds on hpess/chef by adding Kibana. Currently installing kibana 4.0.1
+This container builds on hpess/chef by adding Kibana. Currently installing kibana 4.1.0
 
 ## Use
 It's pretty simple, here is an example docker compose file with all available parameters:

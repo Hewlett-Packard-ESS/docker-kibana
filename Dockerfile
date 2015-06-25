@@ -2,7 +2,7 @@ FROM hpess/chef:master
 MAINTAINER Karl Stoney <karl.stoney@hp.com> 
 
 RUN cd /opt && \
-    wget --quiet https://download.elasticsearch.org/kibana/kibana/kibana-4.0.2-linux-x64.tar.gz && \ 
+    wget --quiet https://download.elasticsearch.org/kibana/kibana/kibana-4.1.0-linux-x64.tar.gz && \ 
     tar zxf kibana-*.tar.gz && \
     rm kibana-*.tar.gz && \
     mv kibana-* kibana && \
